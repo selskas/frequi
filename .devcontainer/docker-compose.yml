@@ -10,7 +10,13 @@ services:
     volumes:
       - ../:/home/dev/frequi
       - frequi-node-modules:/home/dev/frequi/node_modules
-    command: /bin/sh -c "while sleep 1000; do :; done"
+
+      - "${HOME}/.ssh:/home/dev/.ssh:ro"
+      - "${HOME}/.gitconfig:/home/dev/.gitconfig:ro"
+      - frequi-bashhistory:/home/dev/commandhistory
+      - frequi-vscode-server:/home/dev/.vscode-server
+      - frequi-server-insiders:/home/dev/.vscode-server-insiders
+    command: /bin/bash -c "while sleep 1000; do :; done"
     # networks:
     #   - frequi
     ports:
@@ -21,3 +27,6 @@ services:
 
 volumes:
   frequi-node-modules:
+  frequi-bashhistory:
+  frequi-vscode-server:
+  frequi-server-insiders:

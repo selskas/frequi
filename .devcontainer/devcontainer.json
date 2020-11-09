@@ -1,7 +1,9 @@
 /* cSpell:disable */
 {
 	"name": "frequi",
-	"dockerComposeFile": ["docker-compose.yml","docker-compose.vscode.yml"],
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
 	"service": "web",
     "workspaceFolder": "/home/dev/frequi",
 	"settings": {
