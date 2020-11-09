@@ -1,6 +1,6 @@
 version: '3.4'
 services:
-  web:
+  frequi:
     build:
       context: ..
       target: dev
