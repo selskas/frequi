@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   web:
-    build: 
+    build:
       context: ..
       target: dev
       dockerfile: .devcontainer/Dockerfile
@@ -11,13 +11,13 @@ services:
       - ../:/home/dev/frequi
       - frequi-node-modules:/home/dev/frequi/node_modules
     command: /bin/sh -c "while sleep 1000; do :; done"
-    networks:
-      - frequi
+    # networks:
+    #   - frequi
     ports:
       - 8080:8080
 
-networks:
-  frequi:
+# networks:
+#   frequi:
 
 volumes:
   frequi-node-modules:
